@@ -1,0 +1,48 @@
+---
+import Heading from "../ui/Heading";
+import ProjectCard from "../ui/ProjectCard";
+---
+
+<div class="project-background">
+  <div class="container">
+    <Heading heading={"PROJECTS"} />
+    <section class="projects">
+      <div class="project-display display-1"><ProjectCard /></div>
+      <div class="project-display display-2"><ProjectCard /></div>
+    </section>
+  </div>
+</div>
+<style lang="scss">
+  .project-background {
+    border-radius: 30px;
+
+    padding-top: 5px;
+    padding-bottom: 150px;
+    margin-top: 150px;
+    background: linear-gradient(-45deg, #fff1f2, #fecdd3, #fef3c7, #fffbeb);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  .project-display {
+    height: 800px;
+    width: 100%;
+    display: flex;
+  }
+
+  .display-1 {
+    align-items: flex-start;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

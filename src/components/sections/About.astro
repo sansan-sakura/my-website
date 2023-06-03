@@ -1,0 +1,47 @@
+---
+import Heading from "../ui/Heading";
+import ReadMoreBtn from "../ui/ReadMoreBtn";
+---
+
+<div class="container">
+  <Heading heading={"ABOUT ME"} />
+  <section class="about-section">
+    <div class="text-box">
+      I am a Japanese frontend developer, who keens on buiding cute, fast,
+      mordern applications! I enjoy playing with technologies to experiment for
+      new discoveries.
+      <br />
+      Besides technology, I am a mother of two little boys and an old-fashion person
+      who loves old way of life style and vintage. I love good coffee, but also tee
+      with milk, traveling, reading, learning new langugaes, and gardening.
+      <ReadMoreBtn client:load />
+    </div>
+    <div class="image-box">
+      <img src="/images/apple.jpeg" alt="" />
+    </div>
+  </section>
+</div>
+
+<style lang="scss">
+  @use "../../styles/scss/variables" as *;
+  .about-section {
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+    padding-top: 30px;
+  }
+
+  .text-box {
+    padding-top: 40px;
+    width: 520px;
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: $font-text, sans-serif;
+  }
+  .image-box {
+    img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+</style>

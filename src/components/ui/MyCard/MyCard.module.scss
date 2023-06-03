@@ -1,0 +1,77 @@
+@use "../../../styles/scss/variables" as *;
+
+.card {
+  width: 563px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+
+  &_inner {
+    width: 563px;
+    height: 430px;
+    padding-bottom: 30px;
+    background-color: rgba($color-gray-100, 0.3);
+    box-shadow: 0px 10px 20px rgba(163, 158, 158, 0.12);
+    backdrop-filter: blur(23px);
+    border-radius: 32px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .myImage {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      position: absolute;
+      top: -120px;
+      right: 171px;
+      filter: drop-shadow(0 8px 8px rgb(249, 163, 177));
+      transition: all 0.3s ease-in;
+      &:hover {
+        filter: drop-shadow(0 16px 16px rgb(249, 163, 177));
+      }
+    }
+  }
+}
+
+.text {
+  margin-top: 100px;
+  color: $color-gray-900;
+  text-align: center;
+  font-family: $font-display;
+  transition: all 0.3s ease-in;
+
+  h1 {
+    font-size: 70px;
+    color: white;
+    -webkit-text-stroke: 0.5px green;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: orange;
+      -webkit-text-stroke: 0;
+    }
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+
+.bird {
+  position: absolute;
+  width: 200px;
+  top: -130px;
+  right: -80px;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}

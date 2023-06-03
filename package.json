@@ -7,9 +7,24 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "dependencies": {
-    "astro": "^2.0.18"
+    "@astrojs/react": "^2.1.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "astro": "^2.0.18",
+    "astro-particles": "^2.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsparticles": "^2.9.3",
+    "tsparticles-engine": "^2.9.3",
+    "vanilla-tilt": "^1.8.0"
+  },
+  "devDependencies": {
+    "prettier": "2.8.5",
+    "prettier-plugin-astro": "^0.8.0",
+    "sass": "^1.59.3"
   }
 }

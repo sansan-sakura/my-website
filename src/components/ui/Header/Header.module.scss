@@ -1,0 +1,70 @@
+@use "../../../styles/scss/variables" as *;
+
+.header {
+  padding: 10px 30px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logoContainer {
+  width: 200px;
+  height: 50px;
+
+  img {
+    width: 100px;
+    margin-left: 50px;
+  }
+}
+
+nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  transition: all 0.3s ease;
+  font-family: $font-heading;
+
+  &::after {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url(/images/flower2.png);
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    &:hover {
+      transform: rotate(45deg);
+    }
+  }
+
+  &:not(:first-child)::after {
+    right: 53px;
+  }
+
+  &:nth-child(2)::after {
+    right: 56px;
+  }
+
+  &:hover {
+    transform: rotate(15deg);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-gray-900;
+  font-size: 20px;
+}

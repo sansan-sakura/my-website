@@ -1,0 +1,19 @@
+@use "../../../styles/scss/variables" as *;
+
+.heading {
+  font-size: 54px;
+  color: #efeeee;
+  font-family: $font-heading;
+  padding: 0 44px;
+  font-weight: 400;
+  background-image: url("/images/leaf.png");
+  // background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  height: 120px;
+  width: fit-content;
+  text-shadow: rgb(6, 80, 6) 3px 5px 2px;
+
+  display: flex;
+  align-items: center;
+}

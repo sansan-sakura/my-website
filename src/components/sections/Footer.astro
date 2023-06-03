@@ -1,0 +1,53 @@
+---
+import GitBtn from "../ui/GitBtn";
+import LinkedIn from "../ui/LinkedIn";
+---
+
+<footer>
+  <div class="social">
+    <LinkedIn />
+    <GitBtn />
+  </div>
+  <p>Sakura Tanaka &copy; 2023</p>
+</footer>
+<style lang="scss">
+  @use "../../styles/scss/variables.scss" as *;
+  footer {
+    border-radius: 30px;
+    margin: 0 30px;
+    padding: 20px 30px;
+
+    height: 300px;
+    background: linear-gradient(-45deg, #fff1f2, #fecdd3, #fef3c7, #fffbeb);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    // align-items: flex-end;
+  }
+
+  p {
+    font-size: 20px;
+    color: #444;
+    font-family: $font-text;
+  }
+  .social {
+    display: flex;
+    gap: 20px;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

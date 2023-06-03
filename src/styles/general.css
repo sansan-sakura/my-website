@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  /* background: #444; */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 150px auto 0;
+}
