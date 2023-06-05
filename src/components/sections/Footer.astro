@@ -1,14 +1,10 @@
 ---
-import GitBtn from "../ui/GitBtn";
-import LinkedIn from "../ui/LinkedIn";
+
 ---
 
 <footer>
-  <div class="social">
-    <LinkedIn />
-    <GitBtn />
-  </div>
-  <p>Sakura Tanaka &copy; 2023</p>
+
+  <small>Sakura Tanaka &copy; 2023</small>
 </footer>
 <style lang="scss">
   @use "../../styles/scss/variables.scss" as *;
@@ -23,21 +19,16 @@ import LinkedIn from "../ui/LinkedIn";
     animation: gradient 15s ease infinite;
 
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-    flex-direction: column;
-    // align-items: flex-end;
+    justify-content: center;
   }
 
-  p {
-    font-size: 20px;
+  small{
+    font-size: 14px;
     color: #444;
     font-family: $font-text;
   }
-  .social {
-    display: flex;
-    gap: 20px;
-  }
+  
 
   @keyframes gradient {
     0% {

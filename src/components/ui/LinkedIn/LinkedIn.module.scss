@@ -2,7 +2,10 @@
 
 .linkedin_icon {
   width: 40px;
-  filter: contrast(30%);
+  filter: contrast(80%);
+  border-radius: 3px;
+  border:1.5px solid rgba(0, 0, 0);
+  padding: 4px;
 }
 
 .linkedinBtn {
@@ -11,7 +14,7 @@
   border-radius: 6px;
   border: none;
   filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 
   &:hover {
     transform: translate(3px, 3px);

@@ -1,0 +1,18 @@
+@use "../../../styles/scss/variables" as *;
+
+.container{
+    position: fixed;
+    z-index: 10000;
+    bottom:-100px;
+    right:60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity:0;
+    transition-duration: .2s;
+}
+
+.isVisible{
+    bottom: 40px;
+    opacity:1;
+}
