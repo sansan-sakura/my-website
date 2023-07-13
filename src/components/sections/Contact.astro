@@ -5,8 +5,8 @@ import Heading from "../ui/Heading";
 <div class="container">
   <Heading heading={"CONTACT"} />
   <section class="contact">
+    <img src="/images/mail.svg" alt="" />
     <div class="contact_form">
-      <img src="/images/cherry.jpeg" alt="" />
       <form method="POST">
         <label>
           <input type="email" name="email" required placeholder="Email*" />
@@ -25,18 +25,22 @@ import Heading from "../ui/Heading";
 
 <style lang="scss">
   @use "../../styles/scss/variables.scss" as *;
+
   .contact {
+    display: flex;
   }
 
   img {
     width: 500px;
+    animation: bounce 1s infinite;
   }
 
   .contact_form {
+    width: 40%;
     margin: 100px auto;
-    // border: 3px solid orange;
+    padding: 40px 30px;
     border-radius: 30px;
-    box-shadow: 6px 10px 12px 8px rgba(255, 166, 0, 0.4);
+    box-shadow: $shadow-lg;
     display: flex;
     overflow: hidden;
   }
@@ -48,18 +52,23 @@ import Heading from "../ui/Heading";
     align-items: center;
     justify-content: space-evenly;
     gap: 40px;
-    padding: 100px 30px;
     font-family: $font-text;
+  }
+
+  label {
+    display: block;
+    width: 100%;
   }
 
   input,
   textarea,
   button {
+    display: block;
+    width: 100%;
     border: none;
-
-    width: 400px;
     padding: 10px 40px;
-    box-shadow: 4px 6px 8px 3px rgba(255, 166, 0, 0.41);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
     border-radius: 10px;
   }
 
@@ -67,12 +76,16 @@ import Heading from "../ui/Heading";
   textarea:focus {
     outline: 3px solid rgba(82, 152, 82, 0.462);
   }
+
   textarea {
-    width: 400px;
+    display: block;
+    width: 100%;
     height: 150px;
+    resize: none;
   }
 
   button {
+    cursor: pointer;
     background-color: rgba(82, 152, 82, 0.462);
     color: #fff;
   }
@@ -80,7 +93,20 @@ import Heading from "../ui/Heading";
   button:hover {
     background-color: rgba(82, 152, 82);
   }
+
   button:active {
     transform: translate3d(-2px);
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
   }
 </style>

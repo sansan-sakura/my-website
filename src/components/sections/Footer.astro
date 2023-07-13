@@ -1,11 +1,10 @@
 ---
-
 ---
 
 <footer>
-
   <small>Sakura Tanaka &copy; 2023</small>
 </footer>
+<div class="bottom-space"></div>
 <style lang="scss">
   @use "../../styles/scss/variables.scss" as *;
   footer {
@@ -23,12 +22,15 @@
     justify-content: center;
   }
 
-  small{
+  small {
     font-size: 14px;
     color: #444;
     font-family: $font-text;
   }
-  
+
+  .bottom-space {
+    height: 30px;
+  }
 
   @keyframes gradient {
     0% {

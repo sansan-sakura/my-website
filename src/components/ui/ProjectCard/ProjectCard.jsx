@@ -6,18 +6,13 @@ export default function ProjectCard() {
       <img src="/images/cherry.jpeg" alt="" className={style.image} />
       <div className={style.text}>
         <h3 className={style.title}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati
-          architecto.
+          Lorem ipsum dolor sit, amet consectetur.
         </h3>
-        <h4 className={style.subtitle}>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae.
-        </h4>
 
         <p className={style.p}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
           beatae aut corrupti laborum tempora! Tempora id illo excepturi
-          corporis, cumque debitis, nulla labore quas adipisci itaque optio vero
-          qui doloribus.
+          corporis.
         </p>
       </div>
     </div>
