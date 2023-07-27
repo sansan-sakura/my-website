@@ -8,11 +8,11 @@
 <style lang="scss">
   @use "../../styles/scss/variables.scss" as *;
   footer {
-    border-radius: 30px;
-    margin: 0 30px;
+    border-radius: 10px;
+    margin: 0 10px;
     padding: 20px 30px;
 
-    height: 300px;
+    height: 200px;
     background: linear-gradient(-45deg, #fff1f2, #fecdd3, #fef3c7, #fffbeb);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -29,7 +29,7 @@
   }
 
   .bottom-space {
-    height: 30px;
+    height: 10px;
   }
 
   @keyframes gradient {
@@ -41,6 +41,29 @@
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .bottom-space {
+      height: 20px;
+    }
+
+    footer {
+      border-radius: 20px;
+      margin: 0 20px;
+      height: 300px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bottom-space {
+      height: 30px;
+    }
+
+    footer {
+      border-radius: 30px;
+      margin: 0 30px;
     }
   }
 </style>

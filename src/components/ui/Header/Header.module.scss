@@ -18,53 +18,168 @@
   }
 }
 
-nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-evenly;
-
-  align-items: center;
+nav li {
+  display: none;
 }
 
-li {
-  list-style: none;
-  position: relative;
-  transition: all 0.3s ease;
-  font-family: $font-heading;
+// nav {
+//   width: 40%;
+//   display: flex;
+//   justify-content: space-evenly;
 
-  &::after {
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-image: url(/images/flower2.png);
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 40px;
-    margin-top: auto;
-    margin-bottom: auto;
+//   align-items: center;
+// }
 
-    &:hover {
-      transform: rotate(45deg);
+// li {
+//   list-style: none;
+//   position: relative;
+//   transition: all 0.3s ease;
+//   font-family: $font-heading;
+
+//   &::after {
+//     content: "";
+//     width: 60px;
+//     height: 60px;
+//     background-image: url(/images/flower2.png);
+//     background-size: contain;
+//     position: absolute;
+//     top: 0;
+//     bottom: 0;
+//     right: 40px;
+//     margin-top: auto;
+//     margin-bottom: auto;
+
+//     &:hover {
+//       transform: rotate(45deg);
+//     }
+//   }
+
+//   &:not(:first-child)::after {
+//     right: 53px;
+//   }
+
+//   &:nth-child(2)::after {
+//     right: 56px;
+//   }
+
+//   &:hover {
+//     transform: rotate(15deg);
+//   }
+// }
+
+// a {
+//   text-decoration: none;
+//   color: $color-gray-900;
+//   font-size: 20px;
+// }
+
+@media (min-width: 600px) {
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 10px 20px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+  }
+
+  .logoContainer {
+    width: 80px;
+    height: 40px;
+
+    img {
+      width: 100px;
+      margin-left: 60px;
     }
   }
 
-  &:not(:first-child)::after {
-    right: 53px;
+  nav li {
+    display: inline-block;
+  }
+  nav {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
-  &:nth-child(2)::after {
-    right: 56px;
-  }
+  li {
+    list-style: none;
+    position: relative;
+    transition: all 0.3s ease;
+    font-family: $font-heading;
 
-  &:hover {
-    transform: rotate(15deg);
+    &::after {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url(/images/flower2.png);
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 28px;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      &:hover {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:last-child:after {
+      right: 39px;
+    }
+
+    &:nth-child(2)::after {
+      right: 42px;
+    }
+
+    &:hover {
+      transform: rotate(15deg);
+    }
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: $color-gray-900;
+    }
   }
 }
+@media (min-width: 1024px) {
+  .header {
+    padding: 10px 30px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+  }
 
-a {
-  text-decoration: none;
-  color: $color-gray-900;
-  font-size: 20px;
+  .logoContainer {
+    width: 200px;
+    height: 50px;
+
+    img {
+      width: 100px;
+      margin-left: 50px;
+    }
+  }
+  li {
+    &::after {
+      right: 40px;
+    }
+
+    &:not(:first-child)::after {
+      right: 53px;
+    }
+
+    &:nth-child(2)::after {
+      right: 56px;
+    }
+    a {
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: 1280px) {
 }

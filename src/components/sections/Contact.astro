@@ -28,10 +28,13 @@ import Heading from "../ui/Heading";
 
   .contact {
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   img {
-    width: 500px;
+    width: 300px;
+    margin-bottom: 80px;
     animation: bounce 1s infinite;
     filter: sepia(7%) brightness(98%) opacity(93%);
     -webkit-filter: sepia(7%) brightness(98%) opacity(93%);
@@ -39,10 +42,10 @@ import Heading from "../ui/Heading";
   }
 
   .contact_form {
-    width: 40%;
-    margin: 100px auto;
-    padding: 40px 30px;
-    border-radius: 30px;
+    width: 320px;
+    margin: 100px auto 60px;
+    padding: 16px 12px;
+    border-radius: 10px;
     box-shadow: $shadow-lg;
     display: flex;
     overflow: hidden;
@@ -111,5 +114,42 @@ import Heading from "../ui/Heading";
       transform: translateY(0);
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
+  }
+
+  @media (min-width: 600px) {
+    .contact_form {
+      width: 500px;
+      margin-bottom: 80px;
+      padding: 40px 30px;
+      border-radius: 20px;
+    }
+
+    img {
+      width: 380px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .contact_form {
+      border-radius: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .contact {
+      flex-direction: row;
+    }
+
+    img {
+      width: 500px;
+    }
+
+    .contact_form {
+      width: 40%;
+      margin: 100px auto;
+      padding: 40px 30px;
+    }
+  }
+  @media (min-width: 1280px) {
   }
 </style>

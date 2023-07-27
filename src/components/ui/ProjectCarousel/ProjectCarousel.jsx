@@ -21,16 +21,14 @@ export default function ProjectCarousel() {
         loop="true"
         navigation
         pagination={{ clickable: true, dynamicBullets: true }}
-        scrollbar={{ draggable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         style={{
-          "--swiper-pagination-color": "#FFBA08",
-          "--swiper-pagination-bullet-inactive-color": "#999999",
+          "--swiper-pagination-color": "#fd9848",
+          "--swiper-pagination-bullet-inactive-color": "#fff",
           "--swiper-pagination-bullet-inactive-opacity": "1",
-          "--swiper-pagination-bullet-size": "20px",
+          "--swiper-pagination-bullet-size": "30px",
           "--swiper-pagination-bullet-horizontal-gap": "10px",
-          "swiper-button-next-color": "red",
         }}
       >
         <SwiperSlide>
