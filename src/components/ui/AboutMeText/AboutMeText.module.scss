@@ -3,9 +3,9 @@
 .btn_box {
   margin-top: 50px;
   width: 300px;
-  border: 2px solid #c99a9a;
+  border: 1px solid #c99a9a;
   border-radius: 8px;
-  box-shadow: 0px 5px 5px #c99a9a;
+  box-shadow: $shadow-lg;
 }
 
 .h5 {
@@ -23,7 +23,7 @@
 .circle {
   width: 15px;
   height: 15px;
-  border: #444 solid 1px;
+  border: #c78585 solid 1px;
   border-radius: 50%;
   .fill {
     background: #c78585;
@@ -41,4 +41,10 @@
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.green {
+  background-color: green;
+  height: 5px;
+  width: 5px;
 }

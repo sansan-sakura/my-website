@@ -1,47 +1,44 @@
 ---
 import Heading from "../ui/Heading";
-import ReadMoreBtn from "../ui/ReadMoreBtn";
+import AboutMeText from "../ui/AboutMeText";
 ---
 
 <div class="container">
   <Heading heading={"ABOUT ME"} />
   <section class="about-section">
     <div class="text-box">
-      I am a Japanese frontend developer, who keens on buiding cute, fast,
-      mordern applications! I enjoy playing with technologies to experiment for
-      new discoveries.
-      <br />
-      Besides technology, I am a mother of two little boys and an old-fashion person
-      who loves old way of life style and vintage. I love good coffee, but also tee
-      with milk, traveling, reading, learning new langugaes, and gardening.
-      <ReadMoreBtn client:load />
+      <AboutMeText client:load />
     </div>
     <div class="image-box">
-      <img src="/images/about.jpg" alt="" />
+      <img src="/images/aboutMe.jpg" alt="" />
     </div>
   </section>
 </div>
 
 <style lang="scss">
   @use "../../styles/scss/variables" as *;
+
   .about-section {
     display: flex;
     justify-content: center;
-    gap: 110px;
+    gap: 60px;
     padding-top: 30px;
   }
 
   .text-box {
     padding-top: 40px;
-    width: 520px;
-    font-size: 20px;
+    max-width: 520px;
+    font-size: 18px;
     line-height: 1.8;
     font-family: $font-text, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   .image-box {
     img {
-      width: 400px;
-      // height: 400px;
+      width: 450px;
     }
   }
 </style>
