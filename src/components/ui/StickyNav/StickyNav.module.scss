@@ -3,7 +3,7 @@
 .container {
   position: fixed;
   z-index: 10000;
-  bottom: -100px;
+  bottom: 40px;
   right: 30px;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,12 @@
 @media (min-width: 600px) {
   .container {
     right: 60px;
-    bottom: -100px;
+    bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    right: 80px;
+    bottom: 80px;
   }
 }

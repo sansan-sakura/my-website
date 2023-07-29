@@ -3,23 +3,166 @@
 .header {
   padding: 10px 30px;
   height: 80px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 100;
 }
 
 .logoContainer {
+  margin: 0 auto;
   width: 200px;
   height: 50px;
 
   img {
     width: 100px;
-    margin-left: 50px;
+    margin-left: 30px;
   }
 }
 
-nav li {
-  display: none;
+// Hamburger menu
+.toggler {
+  z-index: 2;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 90px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger {
+  position: relative;
+  top: 0;
+  left: 40px;
+  height: 40px;
+  width: 40px;
+  padding: 0.6rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger > div {
+  position: absolute;
+  top: -10px;
+  left: 400px;
+  background: #444;
+  height: 2px;
+  width: 30px;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  background: #444;
+  width: 24px;
+  height: 2px;
+  transition: all 0.4s ease;
+}
+
+.hamburger > div::after {
+  top: -10px;
+  width: 24px;
+}
+
+.toggler:checked + .hamburger > div {
+  background: rgba(0, 0, 0, 0);
+}
+
+.toggler:checked + .hamburger > div::before {
+  top: 0;
+  left: 0;
+  width: 30px;
+  transform: rotate(-45deg);
+  background: black;
+}
+
+.toggler:checked + .hamburger > div::after {
+  top: 0;
+  left: 0;
+  width: 30px;
+  transform: rotate(45deg);
+  background: black;
+}
+
+.toggler:checked ~ .menu {
+  background: rgba(255, 255, 255, 0.624);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  z-index: 10000;
+  transition: all 0.4s ease;
+}
+
+body:has(.toggler:checked) {
+  overflow: hidden;
+}
+
+.menu > div {
+  height: 100vh;
+}
+
+.menu > div > ul {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+  visibility: hidden;
+}
+
+.menu > div > ul > li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.menu > div > ul > li > a {
+  color: black;
+  text-decoration: none;
+  font-size: 36px;
+  font-family: $font-heading;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-image: url(/images/flower2.png);
+    background-size: contain;
+    position: absolute;
+    right: -54px;
+    top: -10px;
+  }
+
+  &::after {
+    right: 110px;
+  }
+
+  &:hover {
+    transform: rotate(15deg);
+  }
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    color: $color-gray-900;
+  }
+}
+
+.toggler:checked ~ .menu > div > ul {
+  transition: visibility 0.4s ease;
+  transition-delay: 0.1s;
+  visibility: visible;
+}
+
+.toggler:checked ~ .menu > div > ul > li > a:hover {
+  color: orange;
 }
 
 // nav {
@@ -82,6 +225,10 @@ nav li {
     display: flex;
     justify-content: space-between;
     z-index: 100;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .logoContainer {

@@ -8,15 +8,25 @@ export default function Header() {
       </div>
 
       <nav>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Projects</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
+        <input type="checkbox" className={style.toggler} />
+        <div className={style.hamburger}>
+          <div></div>
+        </div>
+        <div className={style.menu}>
+          <div>
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </div>
   );
