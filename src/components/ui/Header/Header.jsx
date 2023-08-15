@@ -7,11 +7,11 @@ export default function Header() {
         <img src="/images/logo3.png" alt="" />
       </div>
 
-      <nav>
-        <input type="checkbox" className={style.toggler} />
-        <div className={style.hamburger}>
+      <nav className={style.nav}>
+        <input id="header-toggler" type="checkbox" className={style.toggler} />
+        <label htmlFor="header-toggler" className={style.hamburger}>
           <div></div>
-        </div>
+        </label>
         <div className={style.menu}>
           <div>
             <ul>

@@ -16,9 +16,9 @@ export default function ProjectCarousel() {
         grabCursor="true"
         centeredSlides="true"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        loop="true"
+        spaceBetween={10}
+        slidesPerView={1}
+        loop="false"
         navigation
         pagination={{ clickable: true, dynamicBullets: true }}
         onSlideChange={() => console.log("slide change")}
@@ -29,6 +29,20 @@ export default function ProjectCarousel() {
           "--swiper-pagination-bullet-inactive-opacity": "1",
           "--swiper-pagination-bullet-size": "30px",
           "--swiper-pagination-bullet-horizontal-gap": "10px",
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 80,
+          },
+          1026: {
+            slidesPerView: 3,
+            spaceBetween: 100,
+          },
         }}
       >
         <SwiperSlide>

@@ -1,14 +1,19 @@
 @use "../../../styles/scss/variables" as *;
 
 .card {
-  width: 300px;
-  height: 500px;
-  border: #ffba08 solid 4px;
+  width: 270px;
+  height: 450px;
+  border: #ffba08 solid 2px;
   border-radius: 30px;
   margin: 0 auto;
   background-color: $color-white;
   overflow: hidden;
   counter-increment: gallery-cell;
+  @media (min-width: 640px) {
+    width: 300px;
+    height: 500px;
+    border: #ffba08 solid 4px;
+  }
 }
 
 .image {
@@ -20,20 +25,31 @@
 .text {
   display: flex;
   flex-direction: column;
-  padding: 10px 8px;
+  padding: 6px 4px;
+
+  @media (min-width: 640px) {
+    padding: 10px 8px;
+  }
 }
 
 .title {
   font-family: $font-display;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1;
   text-align: center;
+
+  @media (min-width: 640px) {
+    font-size: 26px;
+  }
 }
 
 .p {
   display: block;
   font-family: $font-text;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
   margin: 10px 5px;
+  @media (min-width: 640px) {
+    font-size: 16px;
+  }
 }
