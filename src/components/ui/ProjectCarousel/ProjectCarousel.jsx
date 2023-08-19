@@ -14,7 +14,7 @@ export default function ProjectCarousel() {
     <div className={style.carousel}>
       <Swiper
         grabCursor="true"
-        centeredSlides="true"
+        // centeredSlides="true"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
         slidesPerView={1}
@@ -31,17 +31,13 @@ export default function ProjectCarousel() {
           "--swiper-pagination-bullet-horizontal-gap": "10px",
         }}
         breakpoints={{
-          640: {
+          540: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 10,
           },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 80,
-          },
-          1026: {
+          1028: {
             slidesPerView: 3,
-            spaceBetween: 100,
+            spaceBetween: 20,
           },
         }}
       >

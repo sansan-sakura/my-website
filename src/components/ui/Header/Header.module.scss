@@ -243,6 +243,24 @@ body:has(.toggler:checked) {
   @media (min-width: 768px) {
     position: relative;
     display: inline-block;
+
+    &:last-child a::after {
+      @media (min-width: 768px) {
+        right: 39px;
+      }
+      @media (min-width: 1024px) {
+        right: 53px;
+      }
+    }
+
+    &:nth-child(2) a::after {
+      @media (min-width: 768px) {
+        right: 42px;
+      }
+      @media (min-width: 1024px) {
+        right: 56px;
+      }
+    }
   }
 }
 
@@ -292,21 +310,13 @@ body:has(.toggler:checked) {
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 28px;
+      right: 36px;
       margin-top: auto;
       margin-bottom: auto;
     }
-  }
 
-  &:last-child::after {
-    @media (min-width: 768px) {
-      right: 50px;
-    }
-  }
-
-  &:nth-child(2)::after {
-    @media (min-width: 768px) {
-      right: 39px;
+    @media (min-width: 1024px) {
+      right: 40px;
     }
   }
 
@@ -330,21 +340,5 @@ body:has(.toggler:checked) {
 @media (min-width: 768px) {
   .hamburger {
     display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  li {
-    &::after {
-      right: 40px;
-    }
-
-    &:not(:first-child)::after {
-      right: 53px;
-    }
-
-    &:nth-child(2)::after {
-      right: 56px;
-    }
   }
 }

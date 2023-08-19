@@ -1,17 +1,31 @@
 @use "../../../styles/scss/variables" as *;
 
 .carousel {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  // width: 100%;
   padding-inline: 14px;
 
   @media (min-width: 768px) {
-    width: 70%;
+    // width: 70%;
     margin: 0 auto;
   }
   @media (min-width: 1026px) {
-    width: 100%;
+    // width: 100%;
   }
+}
+
+:global(.swiper) {
+  padding-bottom: 50px;
+  @media (min-width: 540px) {
+    padding-bottom: 80px;
+  }
+}
+
+:global(.swiper-button-next::after),
+:global(.swiper-button-prev::after) {
+  background-color: white;
+  padding: 6px 14px;
+  border-radius: 100%;
+  color: #fd9848;
+  font-size: 24px;
+  border: 0.5px solid #fd9848;
 }
