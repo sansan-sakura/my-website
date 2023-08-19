@@ -1,14 +1,13 @@
 @use "../../../styles/scss/variables" as *;
 
 .btn_box {
-  margin-top: 20px;
+  margin-top: 50px;
   width: 260px;
   border: 1px solid #c99a9a;
   border-radius: 8px;
   box-shadow: $shadow-lg;
 
   @media (min-width: 768px) {
-    margin-top: 50px;
     width: 300px;
   }
 }

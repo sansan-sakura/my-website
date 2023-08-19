@@ -31,14 +31,23 @@ import AboutMeText from "../ui/AboutMeText";
 
   .text-box {
     padding-top: 40px;
-    max-width: 520px;
-    font-size: 18px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.6;
     font-family: $font-text, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 520px;
+      justify-content: flex-start;
+    }
   }
 
   .image-box {
@@ -46,8 +55,20 @@ import AboutMeText from "../ui/AboutMeText";
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
+
+    @media (min-width: 1024px) {
+      padding-top: 0;
+    }
     img {
-      width: 450px;
+      width: 320px;
+
+      @media (min-width: 768px) {
+        width: 380px;
+      }
+      @media (min-width: 1024px) {
+        width: 450px;
+      }
     }
   }
 </style>

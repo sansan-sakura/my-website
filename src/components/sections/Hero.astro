@@ -135,8 +135,15 @@ const options: ISourceOptions = {
 
 <style lang="scss">
   .hero {
-    margin: 20px 30px;
+    margin: 20px 0 50px;
     height: 90vh;
+
+    @media (min-width: 640px) {
+      margin: 20px 20px;
+    }
+    @media (min-width: 768px) {
+      margin: 20px 30px;
+    }
   }
 
   .hero_img {
@@ -146,13 +153,19 @@ const options: ISourceOptions = {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    border-radius: 50px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
+    border-radius: 20px;
+
+    @media (min-width: 640px) {
+      border-radius: 50px;
+    }
+    @media (min-width: 768px) {
+    }
   }
 
   .particle {
