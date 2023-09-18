@@ -1,40 +1,104 @@
 ---
 import Heading from "../ui/Heading";
+
+// import { isRegistered, registerUser } from "../../../data/users";
+// import { isValidEmail } from "../../utils/isValidEmail";
+
+// const errors = { username: "", email: "", password: "" };
+// if (Astro.request.method === "POST") {
+//   try {
+//     const data = await Astro.request.formData();
+//     const name = data.get("username");
+//     const email = data.get("email");
+//     const password = data.get("password");
+//     if (typeof name !== "string" || name.length < 1) {
+//       errors.username += "Please enter a username. ";
+//     }
+//     if (typeof email !== "string" || !isValidEmail(email)) {
+//       errors.email += "Email is not valid. ";
+//     } else if (await isRegistered(email)) {
+//       errors.email += "Email is already registered. ";
+//     }
+
+//     const hasErrors = Object.values(errors).some((msg) => msg);
+//     if (!hasErrors) {
+//       await registerUser({ name, email, password });
+//       return Astro.redirect("/login");
+//     }
+//   } catch (error) {
+//     if (error instanceof Error) {
+//       console.error(error.message);
+//     }
+//   }
+// }
 ---
 
-<div class="container" id="contact">
+<div class="container">
   <Heading heading={"CONTACT"} />
   <section class="contact">
     <img src="/images/mail.svg" alt="" />
-    <div class="contact_form">
-      <form method="POST" id="form">
+    <div class="contact_form" id="contact">
+      <form method="POST" action="https://api.staticforms.xyz/submit" id="form">
+        <input
+          type="hidden"
+          name="accessKey"
+          value="7a40841d-8f06-4641-814e-b2525e8218ab"
+        />
+        <input type="text" name="honeypot" style="display: none;" />
         <label>
-          <input type="text" name="subject" placeholder="Name*" />
+          <input type="text" name="name" placeholder="Name*" required />
         </label>
         <label>
-          <input type="email" name="email" required placeholder="Email*" />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Email*"
+            required
+          />
         </label>
 
         <label>
-          <textarea name="Message" required placeholder="Message*"></textarea>
+          <textarea name="message" placeholder="Message*" required></textarea>
         </label>
-        <button type="submit">Submit</button>
+        <input
+          type="hidden"
+          name="redirectTo"
+          value="https://sakura-tanaka.netlify.app/src/pages/contact.astro"
+        />
+        <input type="submit" value="Submit" class="submit-btn" />
       </form>
     </div>
   </section>
 </div>
 
 <script>
-  const form = document.getElementById("form");
+  const submit = document.getElementById("form");
+  const contact: HTMLElement | null = document.getElementById("contact");
 
-  form?.addEventListener("submit", async (e) => {
+  submit?.addEventListener("submit", (e) => {
     e.preventDefault();
-    const res = await fetch("/api/handler");
 
-    console.log(res);
-    const data = await res.text();
-    console.log(data);
+    submit && (submit.textContent = "");
+    const thanksMessageBox = document.createElement("div");
+    thanksMessageBox.classList.add("contact-send");
+    thanksMessageBox.innerHTML = `
+  
+  <p  class="thanks-message">Thank you ! Your message has been send.</p>`;
+
+    submit?.appendChild(thanksMessageBox);
   });
+
+  // const form = document.getElementById("form");
+
+  // form?.addEventListener("submit", async (e) => {
+  //   e.preventDefault();
+  //   const res = await fetch("/api/handler");
+
+  //   console.log(res);
+  //   const data = await res.text();
+  //   console.log(data);
+  // });
 </script>
 
 <style lang="scss">
@@ -82,7 +146,7 @@ import Heading from "../ui/Heading";
 
   input,
   textarea,
-  button {
+  .submit-btn {
     display: block;
     width: 100%;
     border: none;
@@ -104,18 +168,23 @@ import Heading from "../ui/Heading";
     resize: none;
   }
 
-  button {
+  .submit-btn {
     cursor: pointer;
     background-color: rgba(82, 152, 82, 0.462);
     color: #fff;
   }
 
-  button:hover {
+  .submit-btn:hover {
     background-color: rgba(82, 152, 82);
   }
 
-  button:active {
+  .submit-btn:active {
     transform: translate3d(-2px);
+  }
+
+  .thanks-message {
+    font-size: 20px;
+    text-align: center;
   }
 
   @keyframes bounce {

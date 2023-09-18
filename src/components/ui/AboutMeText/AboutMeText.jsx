@@ -17,7 +17,7 @@ export default function AboutMeText() {
                 key={key}
                 style={{
                   backgroundColor:
-                    aboutMeTexts[key] === activeText ? "#c78585" : "white",
+                    aboutMeTexts[key] === activeText ? "#ffc6c6" : "white",
                 }}
                 className={style.circle}
                 onClick={() => {

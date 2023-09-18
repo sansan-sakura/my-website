@@ -5,7 +5,7 @@ import Hero from "../components/sections/Hero.astro";
 import About from "../components/sections/About.astro";
 import Contact from "../components/sections/Contact.astro";
 import Projects from "../components/sections/Projects.astro";
-import StickyNav from "../components/ui/StickyNav"
+import StickyNav from "../components/ui/StickyNav";
 
 import "../styles/general.css";
 import "../styles/reset.css";
@@ -16,13 +16,14 @@ import "../styles/reset.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon11.png" />
+
     <title>Sakura Tanaka</title>
   </head>
   <body>
     <Header />
     <Hero />
-    <StickyNav  client:load/>
+    <StickyNav client:load />
     <About />
     <Projects />
     <Contact />
