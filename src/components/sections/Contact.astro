@@ -2,18 +2,19 @@
 import Heading from "../ui/Heading";
 ---
 
-<div class="container">
+<div class="container" id="contact">
   <Heading heading={"CONTACT"} />
   <section class="contact">
     <img src="/images/mail.svg" alt="" />
     <div class="contact_form">
-      <form method="POST">
+      <form method="POST" id="form">
+        <label>
+          <input type="text" name="subject" placeholder="Name*" />
+        </label>
         <label>
           <input type="email" name="email" required placeholder="Email*" />
         </label>
-        <label>
-          <input type="text" name="subject" placeholder="Subject" />
-        </label>
+
         <label>
           <textarea name="Message" required placeholder="Message*"></textarea>
         </label>
@@ -22,6 +23,19 @@ import Heading from "../ui/Heading";
     </div>
   </section>
 </div>
+
+<script>
+  const form = document.getElementById("form");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const res = await fetch("/api/handler");
+
+    console.log(res);
+    const data = await res.text();
+    console.log(data);
+  });
+</script>
 
 <style lang="scss">
   @use "../../styles/scss/variables.scss" as *;

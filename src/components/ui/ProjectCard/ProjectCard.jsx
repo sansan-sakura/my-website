@@ -1,19 +1,18 @@
+import Button from "../Button";
 import style from "./ProjectCard.module.scss";
 
-export default function ProjectCard() {
+export default function ProjectCard({ text, title, imageUrl, git, link }) {
   return (
     <div className={style.card}>
-      <img src="/images/cherry.jpeg" alt="" className={style.image} />
+      <img src={imageUrl} alt="" className={style.image} />
       <div className={style.text}>
-        <h3 className={style.title}>
-          Lorem ipsum dolor sit, amet consectetur.
-        </h3>
+        <h3 className={style.title}>{title}</h3>
 
-        <p className={style.p}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          beatae aut corrupti laborum tempora! Tempora id illo excepturi
-          corporis.
-        </p>
+        <p className={style.p}>{text}</p>
+        <div className={style.btn_wrapper}>
+          <Button link={git} text={"</>"} />
+          <Button link={link} text={"Interested?"} />
+        </div>
       </div>
     </div>
   );
