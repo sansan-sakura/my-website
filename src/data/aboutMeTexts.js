@@ -1,7 +1,10 @@
 export const aboutMeTexts = {
-  shortest: "shortest",
-  short: "short",
-  middle: "middle",
-  long: "long",
-  longest: "longest",
+  shortest: "I am a mother of two little boys and a coding enthusiast.",
+  short:
+    "I am a coding enthusiast. I started learning coding in 2022 and am currently attending a bootcamp at Technigo in Sweden. I am also a mum of two energetic boys who have a passion for outdoor play.",
+  middle:
+    "I am a x-french pastry backer who started learning programming in 2022. I am doing coding bootcamp at Technigo in Sweden since August 2023. I am learning JavaScript / React / Node.js and improving my skills and knowledge. Apart from that, I have two little boys who just love to be outside and go fishing. ",
+  long: "I am x-french backer trying to change career. I have started to learn programming in 2022, and I have been attending a boot camp at Technigo in Sweden since August 2023. I am learning JavaScript/ Node.js/ React and improving my skills and knowledge about programming and technology in general. I am also interested in UX/UI and would like to learn more about web design soon!! I am a mother of two boys who are very fond of nature and fishing! We moved to Sweden this year, live in northern Sweden and enjoy the wild nature.",
+  longest:
+    "I am x-french pastry baker who loves to create something new/ beautiful/ creative. I started learning programming in 2022 when I had the second boy because I wanted to be more flexible about where and when I work. At that time we were in Germany, where I had no one to ask for help, so I had to take care of my children and could not do any work. Nevertheless, I really wanted to work and contribute to society.So my decision was: computer programming!I am now part of a boot camp at technigo in Sweden, where we have moved to this year. We live in a town in northern Sweden and enjoy the wild and rough nature with two boys. They love Swedish nature, picking berries and mushrooms, fishing, walking and camping.I love programming, problem solving, looking at somebody's code to see how it could be done in a different way, thinking about performance and of course learning more and more about programming and new technologies. I find programming very creative and attractive because it grows so fast, you never get bored! I am also interested in UX/UI and would like to learn more about web design soon.",
 };

@@ -3,7 +3,7 @@ import style from "./AboutMeText.module.scss";
 import { aboutMeTexts } from "../../../data/aboutMeTexts";
 
 export default function AboutMeText() {
-  const [activeText, setActiveText] = useState("shortest");
+  const [activeText, setActiveText] = useState(aboutMeTexts.shortest);
 
   return (
     <div>
@@ -16,10 +16,13 @@ export default function AboutMeText() {
               <button
                 key={key}
                 style={{
-                  backgroundColor: key === activeText ? "#c78585" : "white",
+                  backgroundColor:
+                    aboutMeTexts[key] === activeText ? "#c78585" : "white",
                 }}
                 className={style.circle}
-                onClick={() => setActiveText(aboutMeTexts[key])}
+                onClick={() => {
+                  setActiveText(aboutMeTexts[key]);
+                }}
               ></button>
             ))}
           </div>
