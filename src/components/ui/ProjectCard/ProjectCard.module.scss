@@ -18,6 +18,10 @@
     height: 500px;
     border: #ffba08 solid 4px;
   }
+
+  @media (min-width: 1260px) {
+    height: 600px;
+  }
   @media (min-width: 1600px) {
     height: 660px;
   }
