@@ -48,3 +48,21 @@ button {
     margin: 80px auto 0;
   }
 }
+
+.swiper {
+  padding-bottom: 100px;
+  @media (min-width: 540px) {
+    padding-bottom: 80px;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  background-color: white;
+  padding: 6px 14px;
+  border-radius: 100%;
+  color: #fd9848;
+  font-size: 24px;
+  border: 0.5px solid #fd9848;
+  margin-bottom: 110px;
+}
