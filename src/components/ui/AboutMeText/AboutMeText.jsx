@@ -3,7 +3,7 @@ import style from "./AboutMeText.module.scss";
 import { aboutMeTexts } from "../../../data/aboutMeTexts";
 
 export default function AboutMeText() {
-  const [activeText, setActiveText] = useState(aboutMeTexts.shortest);
+  const [activeText, setActiveText] = useState(aboutMeTexts.middle);
 
   return (
     <div>

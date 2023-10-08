@@ -1,11 +1,12 @@
 @use "../../../styles/scss/variables" as *;
 
 .btn_box {
-  margin-top: 50px;
+  margin: 50px auto 0;
   width: 260px;
-  background-color: rgba(255, 228, 228, 0.569);
+  background-color: rgba(255, 228, 228);
   border-radius: 8px;
-  box-shadow: $shadow-2xl;
+  box-shadow: $shadow-lg;
+  border: solid 0.5px #ffc6c6;
 
   @media (min-width: 768px) {
     width: 300px;
@@ -14,7 +15,7 @@
 
 .h5 {
   font-size: 12px;
-  color: $color-gray-700;
+  color: $color-gray-900;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -40,7 +41,7 @@
 .p {
   display: block;
   font-size: 10px;
-  color: $color-gray-700;
+  color: $color-gray-900;
 }
 
 .length_box {

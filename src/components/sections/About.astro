@@ -22,7 +22,7 @@ import AboutMeText from "../ui/AboutMeText";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 50px;
     @media (min-width: 1024px) {
       flex-direction: row;
       gap: 60px;
@@ -30,9 +30,13 @@ import AboutMeText from "../ui/AboutMeText";
   }
 
   .text-box {
-    padding-top: 40px;
-    font-size: 16px;
-    line-height: 1.6;
+    background: linear-gradient(-45deg, #fff1f2, #fffbeb, #fef3c7);
+    border-radius: 20px;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #444;
     font-family: $font-text, sans-serif;
     display: flex;
     flex-direction: column;
@@ -40,8 +44,8 @@ import AboutMeText from "../ui/AboutMeText";
     justify-content: center;
 
     @media (min-width: 768px) {
-      font-size: 18px;
-      line-height: 1.8;
+      font-size: 20px;
+      line-height: 2;
     }
 
     @media (min-width: 1024px) {
